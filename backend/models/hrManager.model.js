@@ -6,7 +6,6 @@ const hrManagerSchema = new mongoose.Schema(
         email: { type: String, required: true, unique: true },
         password: { type: String, required: true }, // securely hashed password for login
         jobPostings: [{ type: mongoose.Schema.Types.ObjectId, ref: 'JobPosting', default: [] }], // list of job postings managed
-        dateCreated: { type: Date, default: Date.now }
     },
     { timestamps: true }
 );
